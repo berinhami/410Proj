@@ -38,6 +38,8 @@ For my semeter project, I will build an aplication where a user can create an ac
 - email
 - password
 - sessionInfo
+- level
+- obtainedPoints
 
 #### Puzzle
 - puzzleId
