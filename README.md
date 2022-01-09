@@ -49,3 +49,23 @@ For my semeter project, I will build an aplication where a user can create an ac
 - usersNumbers
 
 ## Value Object
+
+# Rest Design
+## Endpoints
+--- 
+| Description | URL Fragment | HTTP Method | Path Parameter | Representations |
+| --- | --- | --- | --- | ---|
+| Create Account | /accounts | POST
+| Delete Account | /accounts/{userid} | DELETE | userid
+| Log In | /accounts/{userid}/login | PUT | userid
+| Log Out | /accouts/{userid}/logout | PUT | userid
+| Add Number | /puzzle/{cellid} | POST | cellid
+| Delete Number | /puzzle/{cellid} | DELETE | cellid
+| Edit Number | /puzzle/{cellid} | PUT | cellid
+| Get Number | /puzzle | GET
+| Get Points | /accounts/{userid}/points | GET | userid
+| Get Level | /accounts/{userid}/points | GET | userid
+| Add Points | /accounts/{userid}/points | PUT | userid
+| Add Level | /accounts/{userid}/points | PUT | userid
+
+## Representations
