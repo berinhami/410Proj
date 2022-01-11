@@ -6,9 +6,9 @@ For my semeter project, I will build an aplication where a user can create an ac
 ## Events
 - start puzzle
 - delete puzzle
-- number added
-- number deleted
-- number modified
+- number added by user
+- number deleted by user
+- number modified by user
 - user logged in 
 - user logged out
 - user account created
@@ -19,13 +19,17 @@ For my semeter project, I will build an aplication where a user can create an ac
 - points added
 - puzzle created
 - puzzle deleted
+- puzzle modified
+- puzzle submitted 
 
 ## Commands
 - createPuzzle
 - deletePuzzle
-- addNumber
-- deleteNumber
-- modifyNumber
+- modifyPuzzle
+- checkPuzzle
+- addUsersNumber
+- deleteUsersNumber
+- modifyUsersNumber
 - logInUser
 - LogOutUser
 - createUser
@@ -46,9 +50,9 @@ For my semeter project, I will build an aplication where a user can create an ac
 #### Puzzle
 - puzzleId
 - puzzleDifficulty
-- setNumbers
+- originalNumbers
 - completed
-- usersNumbers
+- userEnteredNumbers
 
 ## Value Object
 
@@ -57,20 +61,97 @@ For my semeter project, I will build an aplication where a user can create an ac
 --- 
 | Description | URL Fragment | HTTP Method | Path Parameter | Representations |
 | --- | --- | --- | --- | ---|
-| Create Account | /accounts | POST
+| Create Account | /accounts | POST | Create Account
 | Delete Account | /accounts/{userid} | DELETE | userid
-| Log In | /accounts/{userid}/login | PUT | userid
+| Log In | /accounts/{userid}/login | PUT | userid | Account Login
 | Log Out | /accouts/{userid}/logout | PUT | userid
-| Create Puzzle | /puzzles{puzzleid} | POST | puzzleid
+| Create Puzzle | /puzzles{puzzleid} | POST | puzzleid | Create Puzzle
 | Delete Puzzle | /puzzles{puzzleid} | DELETE | puzzleid
-| Get Puzzle| /puzzles{puzzleid} | GET | puzzleid
-| Add Number | /puzzles/{cellid} | POST | cellid
+| Get Puzzle| /puzzles{puzzleid} | GET | puzzleid | Get Puzzle
+| Add Number | /puzzles/{cellid} | POST | cellid | Set Number
 | Delete Number | /puzzles/{puzzleid}/cells/{cellid} | DELETE | cellid
-| Edit Number | /puzzles/{puzzleid}/cells/{cellid} | PUT | cellid
-| Get Number | /puzzles/{puzzleid}/cells/{cellid} | GET
-| Get Points | /accounts/{userid}/points | GET | userid
-| Get Level | /accounts/{userid}/points | GET | userid
-| Add Points | /accounts/{userid}/points | PUT | userid
-| Add Level | /accounts/{userid}/points | PUT | userid
+| Edit Number | /puzzles/{puzzleid}/cells/{cellid} | PUT | cellid | Set Number
+| Get Number | /puzzles/{puzzleid}/cells/{cellid} | GET | Get Number
+| Get Points | /accounts/{userid}/points | GET | userid | Get Points
+| Get Level | /accounts/{userid}/points | GET | userid | Get Level
+| Add Points | /accounts/{userid}/points | PUT | userid | Set Points
+| Add Level | /accounts/{userid}/points | PUT | userid | Set Level
 
 ## Representations
+### Create Account
+{
+
+    "username":
+    "first name":
+    "last name":
+    "email":
+    "password":
+
+}
+
+### Account Login
+{
+    
+    "password":
+
+}
+
+### Create Puzzle
+{
+
+    "puzzleDifficulty":
+    "originalNumbers":
+}
+
+#### Get Puzzle
+{
+
+    "puzzleid":
+    "puzzleDifficulty":
+    "originalNumbers":
+    "userEnteredNumbers":
+}
+
+#### Set Number
+{
+
+    "puzzleid":
+    "cellid":
+    "userEnteredNumbers":
+}
+
+#### Get Number
+{
+
+    "puzzleid":
+    "cellid":
+
+}
+
+#### Get Points
+{
+
+    "userid":
+    "obtainedPoints":
+}
+
+#### Set Points
+{
+
+    "userid":
+    "obtainedPoints":
+}
+
+#### Get Level
+{
+
+    "userid":
+    "level":
+}
+
+#### Set Level
+{
+
+    "userid":
+    "level":
+}
