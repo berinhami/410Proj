@@ -81,33 +81,33 @@ For my semeter project, I will build an aplication where a user can create an ac
 ### Create Account
 {
 
-    "username":
-    "first name":
-    "last name":
-    "email":
-    "password":
+    "username": "bingbong"
+    "first name": "bing"
+    "last name": "bong"
+    "email": "bingbong@gmail.com"
+    "password": "goodPassword"
 
 }
 
 ### Account Login
 {
     
-    "password":
+    "password": "goodPassword"
 
 }
 
 ### Create Puzzle
 {
 
-    "puzzleDifficulty":
+    "puzzleDifficulty": "easy"
     "originalNumbers":
 }
 
 #### Get Puzzle
 {
 
-    "puzzleid":
-    "puzzleDifficulty":
+    "puzzleid": "1"
+    "puzzleDifficulty": "easy"
     "originalNumbers":
     "userEnteredNumbers":
 }
@@ -115,43 +115,43 @@ For my semeter project, I will build an aplication where a user can create an ac
 #### Set Number
 {
 
-    "puzzleid":
-    "cellid":
+    "puzzleid": "1"
+    "cellid": "1"
     "userEnteredNumbers":
 }
 
 #### Get Number
 {
 
-    "puzzleid":
-    "cellid":
+    "puzzleid": "1"
+    "cellid": "1"
 
 }
 
 #### Get Points
 {
 
-    "userid":
-    "obtainedPoints":
+    "userid": "1"
+    "obtainedPoints": "10"
 }
 
 #### Set Points
 {
 
-    "userid":
-    "obtainedPoints":
+    "userid": "1"
+    "obtainedPoints": "10'
 }
 
 #### Get Level
 {
 
-    "userid":
-    "level":
+    "userid": "1"
+    "level": "1"
 }
 
 #### Set Level
 {
 
-    "userid":
-    "level":
+    "userid": "1"
+    "level": "1"
 }
