@@ -4,6 +4,8 @@ For my semeter project, I will build an aplication where a user can create an ac
 
 # DDD
 ## Events
+- start puzzle
+- delete puzzle
 - number added
 - number deleted
 - number modified
@@ -59,10 +61,12 @@ For my semeter project, I will build an aplication where a user can create an ac
 | Delete Account | /accounts/{userid} | DELETE | userid
 | Log In | /accounts/{userid}/login | PUT | userid
 | Log Out | /accouts/{userid}/logout | PUT | userid
-| Add Number | /puzzle/{cellid} | POST | cellid
-| Delete Number | /puzzle/{cellid} | DELETE | cellid
-| Edit Number | /puzzle/{cellid} | PUT | cellid
-| Get Number | /puzzle | GET
+| Create Puzzle | /puzzles{cellid} | POST | cellid
+| Delete Puzzle | /puzzles{cellid} | DELETE | cellid
+| Add Number | /puzzles/{cellid} | POST | cellid
+| Delete Number | /puzzles/{cellid} | DELETE | cellid
+| Edit Number | /puzzles/{cellid} | PUT | cellid
+| Get Number | /puzzles | GET
 | Get Points | /accounts/{userid}/points | GET | userid
 | Get Level | /accounts/{userid}/points | GET | userid
 | Add Points | /accounts/{userid}/points | PUT | userid
