@@ -61,12 +61,13 @@ For my semeter project, I will build an aplication where a user can create an ac
 | Delete Account | /accounts/{userid} | DELETE | userid
 | Log In | /accounts/{userid}/login | PUT | userid
 | Log Out | /accouts/{userid}/logout | PUT | userid
-| Create Puzzle | /puzzles{cellid} | POST | cellid
-| Delete Puzzle | /puzzles{cellid} | DELETE | cellid
+| Create Puzzle | /puzzles{puzzleid} | POST | puzzleid
+| Delete Puzzle | /puzzles{puzzleid} | DELETE | puzzleid
+| Get Puzzle| /puzzles{puzzleid} | GET | puzzleid
 | Add Number | /puzzles/{cellid} | POST | cellid
-| Delete Number | /puzzles/{cellid} | DELETE | cellid
-| Edit Number | /puzzles/{cellid} | PUT | cellid
-| Get Number | /puzzles | GET
+| Delete Number | /puzzles/{puzzleid}/cells/{cellid} | DELETE | cellid
+| Edit Number | /puzzles/{puzzleid}/cells/{cellid} | PUT | cellid
+| Get Number | /puzzles/{puzzleid}/cells/{cellid} | GET
 | Get Points | /accounts/{userid}/points | GET | userid
 | Get Level | /accounts/{userid}/points | GET | userid
 | Add Points | /accounts/{userid}/points | PUT | userid
