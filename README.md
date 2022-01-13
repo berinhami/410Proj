@@ -64,9 +64,9 @@ For my semeter project, I will build an aplication where a user can create an ac
 | Delete Account | /accounts/{userid} | DELETE | userid
 | Log In | /accounts/{userid}/login | PUT | userid | Account Login
 | Log Out | /accouts/{userid}/logout | PUT | userid
-| Create Puzzle | /puzzles{puzzleid} | POST | puzzleid | Create Puzzle
-| Delete Puzzle | /puzzles{puzzleid} | DELETE | puzzleid
-| Get Puzzle| /puzzles{puzzleid} | GET | puzzleid | Get Puzzle
+| Create Puzzle | /puzzles | POST | puzzleid | Create Puzzle
+| Delete Puzzle | /puzzles/{puzzleid} | DELETE | puzzleid
+| Get Puzzle| /puzzles/{puzzleid} | GET | puzzleid | Get Puzzle
 | Add Number | /puzzles/{cellid} | POST | cellid | Set Number
 | Delete Number | /puzzles/{puzzleid}/cells/{cellid} | DELETE | cellid
 | Edit Number | /puzzles/{puzzleid}/cells/{cellid} | PUT | cellid | Set Number
