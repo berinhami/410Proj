@@ -41,7 +41,6 @@ For my semeter project, I will build an aplication where a user can create an ac
 #### Account
 - userID
 - name
-- email
 - password
 - sessionInfo
 - level
@@ -84,7 +83,6 @@ For my semeter project, I will build an aplication where a user can create an ac
     "username": "bingbong"
     "first name": "bing"
     "last name": "bong"
-    "email": "bingbong@gmail.com"
     "password": "goodPassword"
 
 }
@@ -117,7 +115,7 @@ For my semeter project, I will build an aplication where a user can create an ac
 
     "puzzleid": "1"
     "cellid": "1"
-    "userEnteredNumbers":
+    "userEnteredNumbers": "4"
 }
 
 #### Get Number
@@ -125,14 +123,12 @@ For my semeter project, I will build an aplication where a user can create an ac
 
     "puzzleid": "1"
     "cellid": "1"
-
 }
 
 #### Get Points
 {
 
     "userid": "1"
-    "obtainedPoints": "10"
 }
 
 #### Set Points
@@ -146,7 +142,6 @@ For my semeter project, I will build an aplication where a user can create an ac
 {
 
     "userid": "1"
-    "level": "1"
 }
 
 #### Set Level
