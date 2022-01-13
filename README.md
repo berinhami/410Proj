@@ -67,7 +67,7 @@ For my semeter project, I will build an aplication where a user can create an ac
 | Create Puzzle | /puzzles | POST | puzzleid | Create Puzzle
 | Delete Puzzle | /puzzles/{puzzleid} | DELETE | puzzleid
 | Get Puzzle| /puzzles/{puzzleid} | GET | puzzleid | Get Puzzle
-| Add Number | /puzzles/{cellid} | POST | cellid | Set Number
+| Add Number | /puzzles/{puzzleid}/cells/{cellid} | POST | cellid | Set Number
 | Delete Number | /puzzles/{puzzleid}/cells/{cellid} | DELETE | cellid
 | Edit Number | /puzzles/{puzzleid}/cells/{cellid} | PUT | cellid | Set Number
 | Get Number | /puzzles/{puzzleid}/cells/{cellid} | GET | Get Number
