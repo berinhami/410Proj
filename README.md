@@ -62,19 +62,14 @@ For my semeter project, I will build an aplication where a user can create an ac
 | --- | --- | --- | --- | ---|
 | Create Account | /accounts | POST | Create Account
 | Delete Account | /accounts/{userid} | DELETE | userid
+| Get Account | /accounts/{userid} | GET | userid
 | Log In | /accounts/{userid}/login | PUT | userid | Account Login
 | Log Out | /accouts/{userid}/logout | PUT | userid
 | Create Puzzle | /puzzles | POST | puzzleid | Create Puzzle
 | Delete Puzzle | /puzzles/{puzzleid} | DELETE | puzzleid
 | Get Puzzle| /puzzles/{puzzleid} | GET | puzzleid | Get Puzzle
-| Add Number | /puzzles/{puzzleid}/cells/{cellid} | POST | cellid | Set Number
-| Delete Number | /puzzles/{puzzleid}/cells/{cellid} | DELETE | cellid
 | Edit Number | /puzzles/{puzzleid}/cells/{cellid} | PUT | cellid | Set Number
 | Get Number | /puzzles/{puzzleid}/cells/{cellid} | GET | Get Number
-| Get Points | /accounts/{userid}/points | GET | userid | Get Points
-| Get Level | /accounts/{userid}/points | GET | userid | Get Level
-| Add Points | /accounts/{userid}/points | PUT | userid | Set Points
-| Add Level | /accounts/{userid}/points | PUT | userid | Set Level
 
 ## Representations
 ### Create Account
@@ -85,6 +80,12 @@ For my semeter project, I will build an aplication where a user can create an ac
     "last name": "bong"
     "password": "goodPassword"
 
+}
+
+### Get Account
+{
+
+    "userid": 1
 }
 
 ### Account Login
@@ -104,7 +105,7 @@ For my semeter project, I will build an aplication where a user can create an ac
 #### Get Puzzle
 {
 
-    "puzzleid": "1"
+    "puzzleid": 1
     "puzzleDifficulty": "easy"
     "originalNumbers":
     "userEnteredNumbers":
@@ -113,40 +114,14 @@ For my semeter project, I will build an aplication where a user can create an ac
 #### Set Number
 {
 
-    "puzzleid": "1"
-    "cellid": "1"
-    "userEnteredNumbers": "4"
+    "puzzleid": 1
+    "cellid": 1
+    "userEnteredNumbers": 4
 }
 
 #### Get Number
 {
 
-    "puzzleid": "1"
-    "cellid": "1"
-}
-
-#### Get Points
-{
-
-    "userid": "1"
-}
-
-#### Set Points
-{
-
-    "userid": "1"
-    "obtainedPoints": "10'
-}
-
-#### Get Level
-{
-
-    "userid": "1"
-}
-
-#### Set Level
-{
-
-    "userid": "1"
-    "level": "1"
+    "puzzleid": 1
+    "cellid": 1
 }
