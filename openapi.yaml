@@ -49,6 +49,10 @@ paths:
       responses:
         200:
           description: Got Account
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
         401:
           description: Not authenticated
         403:
@@ -168,6 +172,10 @@ paths:
       responses:
         200:
           description: got the puzzle
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/Puzzle'
         401:
           description: not authenticate
         403:
@@ -199,6 +207,10 @@ paths:
       responses: 
         200:
           description: number changed
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/Puzzle'
         400:
           description: invalid request
         401:
@@ -210,6 +222,10 @@ paths:
       responses:
         200:
           description: got number
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/Puzzle'
         400:
           description: invalid request
         401:
@@ -236,4 +252,25 @@ components:
       required: true
       schema:
         type: string
-          
+  schemas:
+    Account:
+      type: object
+      properties: 
+        username:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        password:
+          type: string
+          writeOnly: true
+    Puzzle:
+      type: object
+      properties:
+        puzzleDifficulty:
+          type: integer
+        puzzleNumbers:
+          type: array
+          items:
+            type: integer
