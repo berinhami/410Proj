@@ -166,8 +166,14 @@ paths:
         - Puzzels
       summary: Get a puzzle
       responses:
-        201:
+        200:
           description: got the puzzle
+        401:
+          description: not authenticate
+        403:
+          description: access denied
+        404:
+          description: puzzle not found
   /puzzles/{puzzleid}/cells/{cellid}:
     parameters:
       - $ref: '#/components/parameters/PathPuzzleId'
@@ -191,19 +197,25 @@ paths:
             example:
               userEnteredNumbers: 4
       responses: 
-        201:
+        200:
           description: number changed
         400:
-          description: Invalid request.
+          description: invalid request
         401:
-          description: Not authenticated.
+          description: not authenticated
     get:
       tags:
         - Numbers
       summary: Get a number
       responses:
-        201:
+        200:
           description: got number
+        400:
+          description: invalid request
+        401:
+          description: not authenticated
+        404:
+          description: not found
 components:
   parameters:
     PathUserId:
