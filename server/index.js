@@ -15,7 +15,8 @@ app.post('/', (req, res) =>{
     if(req.get('content-type') !== 'application/json' && req.get('content-type') !== 'text/plain'){
 		res.status(400).send(`I will not process this`)
     }
-    else{
+    else if(req.get('content-type') === 'application/json'){
+      //  res.json({content: 'application/json', requestBody: req.body}) 
         console.log(req.get('content-type'))
         console.log('Body: ', req.body)
         res.send('OK')
@@ -23,3 +24,4 @@ app.post('/', (req, res) =>{
 })
 
 app.listen(port)
+
