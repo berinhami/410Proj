@@ -69,4 +69,8 @@ server middleware: [{
 }]
 
 npm i openapi-enforcer openapi-enforcer-middleware express
+
+style at the topinheader , javascript before the close of the body
+
+(in index.vue, add languages in bottom)
 */

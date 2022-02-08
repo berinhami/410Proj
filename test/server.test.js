@@ -34,7 +34,7 @@ describe('server', () => {
                     firstName: 'bing',
                     password: 'goodPassword'
                 })
-                .expect(201)
+                .expect(400)
         })
     })
 
@@ -97,7 +97,7 @@ describe('server', () => {
                     "puzzleDifficulty": 'easy',
                     "originalNumbers": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
                 })
-                .expect(201)
+                .expect(400)
               //  expect(response.res.body).to.be.an(Array)
         })
     })
