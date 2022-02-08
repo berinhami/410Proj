@@ -26,7 +26,7 @@ describe('server', () => {
     })
 
     describe('accounts', () => {
-        it('can cant create a false account', () => {
+        it('cant create a false account', () => {
             return request(app)
                 .post('/accounts')
                 .send({
@@ -90,7 +90,7 @@ describe('server', () => {
     })
 
     describe('puzzles', () => {
-        it('can cant create a false puzzle', () => {
+        it('cant create a false puzzle', () => {
             return request(app)
                 .post('/puzzles')
                 .send({
