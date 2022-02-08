@@ -106,9 +106,6 @@ For my semeter project, I will build an aplication where a user can create an ac
 {
 
     "puzzleid": 1
-    "puzzleDifficulty": "easy"
-    "originalNumbers":
-    "userEnteredNumbers":
 }
 
 #### Set Number
